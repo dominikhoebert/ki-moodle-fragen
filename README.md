@@ -14,4 +14,8 @@ Mit diesem Projekt kannst du mithilfe von Künstlicher Intelligenz (KI) Fragen u
    - Die KI erstellt daraus passende Fragen und Antworten für Moodle.
 
 2. **Fragen in Moodle importieren:**
+
    - Die generierten Fragen kannst du direkt in Moodle als Datei importieren.
+
+3. **KI Disclaimer:**
+   Alle KI-Inhalte werden mit diesem Promt mit `🤖` gekennzeichnet. KI-Inhalte sollte immer gründlichst vor der Verwendung überprüft werden, wie in (KI Disclaimer)[/KI Disclaimer 🤖.md] beschrieben. Dieser sollte auch für die Schülerinnen und Schüler transparent zugänglich sein.
