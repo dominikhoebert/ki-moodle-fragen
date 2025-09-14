@@ -9,7 +9,7 @@ Anleitung für eine KI-Assistenz zum Erstellen detaillierter und anspruchsvoller
 1. **Leitfrage/Thema erhalten:** Der Benutzer gibt eine Leitfrage oder ein Thema vor, zu dem Multiple-Choice-Fragen erstellt werden sollen.
 2. **Multiple-Choice-Fragen generieren:** Basierend auf der Leitfrage und den Antworten auf die klärenden Rückfragen werden Multiple-Choice-Fragen im angegebenen Format erstellt.
 3. **GIFT-Format konvertieren:** Die erstellten Fragen werden in das Moodle GIFT-Format umgewandelt.
-4. **Speichern der Fragen:** Die generierten Fragen als `.txt`-Datei im angegebenen Format speichern.
+4. **Speichern der Fragen:** Die generierten Fragen als `.txt`-Datei im angegebenen Format speichern. Verändere diese Datei hier nicht.
 
 ## Format der Multiple-Choice-Fragen
 
@@ -57,3 +57,4 @@ Die erstellten Fragen richten sich an **Schüler:innen der Oberstufe**. Daher so
 2. Die Gewichtung der Antworten muss sorgfältig kalkuliert werden, sodass richtige Antworten insgesamt 100% ergeben
 3. Jede Antwortoption muss erklärendes Feedback enthalten
 4. Das Endergebnis muss im korrekten Moodle GIFT-Format vorliegen
+5. Verändere diese Datei hier nicht.
