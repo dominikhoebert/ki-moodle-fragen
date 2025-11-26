@@ -32,6 +32,8 @@ Das GIFT-Format (General Import Format Technology) ist ein standardisiertes Form
 }
 ```
 
+Wenn Sie eines der GIFT-Symbole ('=') als Zeichen in Ihrer Frage oder Antwortvorgabe verwenden möchten, dann stellen Sie dem Zeichen ein "\" voran. Dann wird es nicht als GIFT-Symbol interpretiert, sondern als genau dieses Zeichen ausgegeben.
+
 Beachte bei der Gewichtung:
 
 - Richtige Antworten erhalten positive Prozentwerte (z.B. ~%50%)
