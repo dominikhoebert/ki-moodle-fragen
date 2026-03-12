@@ -4,6 +4,11 @@
 
 Anleitung für eine KI-Assistenz zum Erstellen von klaren, präzisen und anspruchsvollen SQL‑Aufgaben für den SQLite‑Dialekt. Jede Aufgabe besteht aus einer Fragestellung, der expliziten Angabe der zu verwendenden Tabellen (mit Spaltennamen in Klammern) und einem vollständigen SQL‑Lösungs‑Query.
 
+WICHTIG (MUSS-Regeln):
+
+- Verwende ausschließlich **SELECT**-Statements (read-only). Keine INSERT, UPDATE, DELETE, CREATE, DROP, ALTER oder sonstige Änderungen an der Datenbank.
+- Verwende ausschließlich **vorhandene Tabellen und Spalten** aus der bereitgestellten SQLite‑Datenbank.
+
 ## Prozess
 
 1. Thema/Kompetenz erhalten: Der Benutzer gibt ein Thema (z. B. Joins, Aggregation, Fensterfunktionen) oder eine Leitfrage vor.
@@ -13,7 +18,10 @@ Anleitung für eine KI-Assistenz zum Erstellen von klaren, präzisen und anspruc
 	- Speicherort: In einem Ordner mit dem Fachnamen (z. B. `insy51/`, `syt111/`). Falls der Ordner nicht existiert, erstelle ihn.
 	- Dateiname: `<Thema>_sqlite_aufgaben.txt` (nur Kleinbuchstaben, Leerzeichen durch Unterstriche ersetzen).
 5. SQLite MCP Tool nutzen: Nutze das SQLite MCP Tool, um das Schema direkt aus der bereitgestellten Datenbank zu lesen (z. B. db.sqlite) und darauf basierend realistische Tabellen- und Spaltennamen zu verwenden.
-6. Validierung: Führe jede SQL‑Lösung mit dem SQLite MCP Tool testweise aus. Die Abfrage muss fehlerfrei laufen.
+	- Verwende dabei **nur Tabellen/Spalten, die im Schema tatsächlich existieren**.
+	- Erfinde keine Tabellen/Spalten und lege keine neuen Tabellen an.
+6. Validierung: Führe jede SQL‑Lösung mit dem SQLite MCP Tool testweise aus.
+	- Es müssen **read-only SELECT**-Abfragen sein und fehlerfrei laufen.
 
 ## Zielgruppe
 
@@ -24,6 +32,7 @@ Schüler:innen der Oberstufe bzw. Einsteiger:innen in relationale Datenbanken mi
 - Dialekt: SQLite 3 (Standardfunktionen; RIGHT/FULL JOIN nicht verwenden)
 - Wenn Fensterfunktionen genutzt werden, dann in der von SQLite unterstützten Syntax (z. B. ROW_NUMBER() OVER (...)).
 - Nutze ausschließlich die in der Aufgabe unter „Tabellen“ angegebenen Tabellen und Spalten.
+- Nutze ausschließlich SELECT-Statements (keine Änderungen an Daten oder Schema).
 - Keine zusätzlichen Erklärtexte; nur die geforderten Blöcke ausgeben.
 - Fragetext endet immer mit dem Roboteremoji 🤖.
 
@@ -32,6 +41,7 @@ Schüler:innen der Oberstufe bzw. Einsteiger:innen in relationale Datenbanken mi
 Jede Aufgabe muss exakt in folgender Struktur ausgegeben werden:
 
 Aufgabe <Nr>:
+Titel: <Kurzer, aussagekräftiger Titel>
 Frage: <Präzise Aufgabenstellung in einem Satz/kurzem Absatz> 🤖
 Tabellen:
 - <Tabellenname>(<spalte1>, <spalte2>, ...)
@@ -44,6 +54,7 @@ Trenne Aufgaben optional mit einer Zeile aus drei Bindestrichen (---).
 ## Beispiel
 
 Aufgabe 1:
+Titel: Bestellungen pro Kunde zählen
 Frage: Finde alle Kundennamen und die Anzahl ihrer Bestellungen. 🤖
 Tabellen:
 - customers(id, name)
@@ -57,6 +68,7 @@ GROUP BY c.name;
 ---
 
 Aufgabe 2:
+Titel: Umsatz pro Produkt berechnen
 Frage: Liste pro Produkt die Gesamtumsätze absteigend, zeige nur Produkte mit Umsatz > 1000. 🤖
 Tabellen:
 - products(id, name, price)
@@ -86,6 +98,7 @@ ORDER BY revenue DESC;
 - Eindeutige Gruppierung/Sortierung wo erforderlich (GROUP BY, ORDER BY).
 - Verwende Aliase konsistent und sinnvoll.
  - Jede SQL‑Lösung wurde gegen die bereitgestellte Datenbank mit dem SQLite MCP Tool ausgeführt.
+ - Jede SQL‑Lösung ist ein reines SELECT-Statement (read-only).
 
 ## Hinweise
 

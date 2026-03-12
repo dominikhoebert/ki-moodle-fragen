@@ -32,7 +32,9 @@ Das GIFT-Format (General Import Format Technology) ist ein standardisiertes Form
 }
 ```
 
-Wenn Sie eines der GIFT-Symbole ('=') als Zeichen in Ihrer Frage oder Antwortvorgabe verwenden möchten, dann stellen Sie dem Zeichen ein "\" voran. Dann wird es nicht als GIFT-Symbol interpretiert, sondern als genau dieses Zeichen ausgegeben.
+WICHTIG (MUSS-Regel): Wenn in Fragetext, Antworten oder Feedback die Zeichen `=`, `:`, `~` oder `#` wörtlich vorkommen sollen, MUSST du sie im GIFT-Text mit einem vorangestellten Backslash escapen, sonst werden sie als GIFT-Steuerzeichen interpretiert.
+
+Beispiele (wörtliche Ausgabe): `\=` statt `=`, `\:` statt `:`, `\~` statt `~`, `\#` statt `#`.
 
 Beachte bei der Gewichtung:
 
