@@ -15,6 +15,78 @@
                 "--db-path",
                 "${input:db_path}"
             ]
+        },
+        "sqlite_bikestore": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-sqlite",
+                "--db-path",
+                "${workspaceFolder}/databases/BikeStore.db"
+            ]
+        },
+        "sqlite_employee": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-sqlite",
+                "--db-path",
+                "${workspaceFolder}/databases/employee.db"
+            ]
+        },
+        "sqlite_flightdata": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-sqlite",
+                "--db-path",
+                "${workspaceFolder}/databases/flightdata.db"
+            ]
+        },
+        "sqlite_hospital": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-sqlite",
+                "--db-path",
+                "${workspaceFolder}/databases/hospital.db"
+            ]
+        },
+        "sqlite_hr": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-sqlite",
+                "--db-path",
+                "${workspaceFolder}/databases/hr.db"
+            ]
+        },
+        "sqlite_inventory": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-sqlite",
+                "--db-path",
+                "${workspaceFolder}/databases/inventory.db"
+            ]
+        },
+        "sqlite_movie": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-sqlite",
+                "--db-path",
+                "${workspaceFolder}/databases/movie.db"
+            ]
+        },
+        "sqlite_northwind": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-sqlite",
+                "--db-path",
+                "${workspaceFolder}/databases/northwind.db"
+            ]
+        },
+        "sqlite_soccer": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-sqlite",
+                "--db-path",
+                "${workspaceFolder}/databases/soccer.db"
+            ]
         }
     }
 }

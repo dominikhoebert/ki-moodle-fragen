@@ -7,7 +7,7 @@ Anleitung für eine KI-Assistenz zum Erstellen von klaren, präzisen und anspruc
 WICHTIG (MUSS-Regeln):
 
 - Verwende ausschließlich **SELECT**-Statements (read-only). Keine INSERT, UPDATE, DELETE, CREATE, DROP, ALTER oder sonstige Änderungen an der Datenbank.
-- Verwende ausschließlich **vorhandene Tabellen und Spalten** aus der bereitgestellten SQLite‑Datenbank.
+- Verwende ausschließlich **vorhandene Tabellen und Spalten** aus der ausgewählten/bereitgestellten SQLite‑Datenbank (eine der vorhandenen `.db`-Dateien im Workspace).
 
 ## Prozess
 
@@ -17,10 +17,15 @@ WICHTIG (MUSS-Regeln):
 4. Speichern: Ausgabe als Textdatei im nachstehenden Format.
 	- Speicherort: In einem Ordner mit dem Fachnamen (z. B. `insy51/`, `syt111/`). Falls der Ordner nicht existiert, erstelle ihn.
 	- Dateiname: `<Thema>_sqlite_aufgaben.txt` (nur Kleinbuchstaben, Leerzeichen durch Unterstriche ersetzen).
-5. SQLite MCP Tool nutzen: Nutze das SQLite MCP Tool, um das Schema direkt aus der bereitgestellten Datenbank zu lesen (z. B. db.sqlite) und darauf basierend realistische Tabellen- und Spaltennamen zu verwenden.
+
+5. SQLite MCP Tool nutzen: Nutze das SQLite MCP Tool, um das Schema direkt aus der **passenden** Datenbank zu lesen und darauf basierend realistische Tabellen- und Spaltennamen zu verwenden.
+	- **Schnell-Referenz:** Nutze zuerst `DATABASES.md`, um Tabellen- und Spaltennamen der vorhandenen Datenbanken nachzuschlagen.
+	- Im Workspace liegen mehrere SQLite-Dateien im Ordner `databases/` (typisch `databases/*.db`). Wähle eine Datenbank, die thematisch zur Aufgabe passt.
+	- In VS Code ist üblicherweise **eine MCP-Server-Instanz pro DB-Datei** konfiguriert (z. B. `sqlite_northwind`, `sqlite_movie`, …) und zusätzlich ein frei wählbarer `sqlite`-Server über einen DB-Pfad (z. B. `${workspaceFolder}/db.sqlite`).
 	- Verwende dabei **nur Tabellen/Spalten, die im Schema tatsächlich existieren**.
 	- Erfinde keine Tabellen/Spalten und lege keine neuen Tabellen an.
-6. Validierung: Führe jede SQL‑Lösung mit dem SQLite MCP Tool testweise aus.
+
+6. Validierung: Führe jede SQL‑Lösung mit dem SQLite MCP Tool testweise **gegen dieselbe ausgewählte Datenbank** aus.
 	- Es müssen **read-only SELECT**-Abfragen sein und fehlerfrei laufen.
 
 ## Zielgruppe
@@ -54,9 +59,12 @@ Trenne Aufgaben optional mit einer Zeile aus drei Bindestrichen (---).
 ## Beispiel
 
 Aufgabe 1:
+Database: sqlite_flightdata
 Titel: Bestellungen pro Kunde zählen
 Frage: Finde alle Kundennamen und die Anzahl ihrer Bestellungen. 🤖
+
 Tabellen:
+
 - customers(id, name)
 - orders(id, customer_id, created_at)
 SQL‑Lösung:
@@ -68,9 +76,12 @@ GROUP BY c.name;
 ---
 
 Aufgabe 2:
+Database: sqlite_flightdata
 Titel: Umsatz pro Produkt berechnen
 Frage: Liste pro Produkt die Gesamtumsätze absteigend, zeige nur Produkte mit Umsatz > 1000. 🤖
+
 Tabellen:
+
 - products(id, name, price)
 - order_items(id, order_id, product_id, quantity)
 - orders(id, customer_id, created_at)
