@@ -8,6 +8,8 @@ WICHTIG (MUSS-Regeln):
 
 - Verwende ausschließlich **SELECT**-Statements (read-only). Keine INSERT, UPDATE, DELETE, CREATE, DROP, ALTER oder sonstige Änderungen an der Datenbank.
 - Verwende ausschließlich **vorhandene Tabellen und Spalten** aus der ausgewählten/bereitgestellten SQLite‑Datenbank (eine der vorhandenen `.db`-Dateien im Workspace).
+- Wenn die SQL‑Lösung ein `ORDER BY` enthält, muss der **Fragetext** die Sortierung explizit vorgeben (nach welchen Spalten und in welcher Richtung: aufsteigend/absteigend).
+- Wenn die SQL‑Lösung ein `LIMIT` enthält, muss der **Fragetext** explizit sagen, auf wie viele Ergebnisse begrenzt werden soll.
 
 ## Prozess
 
@@ -107,6 +109,7 @@ ORDER BY revenue DESC;
 - Die SQL‑Lösung ist syntaktisch korrektes SQLite.
 - Alle im SQL verwendeten Tabellen/Spalten sind zuvor unter „Tabellen“ aufgeführt.
 - Eindeutige Gruppierung/Sortierung wo erforderlich (GROUP BY, ORDER BY).
+- Fragetext und SQL‑Lösung sind konsistent: Sortierung (`ORDER BY`) und Begrenzung (`LIMIT`) sind – falls verwendet – auch im Fragetext eindeutig gefordert.
 - Verwende Aliase konsistent und sinnvoll.
  - Jede SQL‑Lösung wurde gegen die bereitgestellte Datenbank mit dem SQLite MCP Tool ausgeführt.
  - Jede SQL‑Lösung ist ein reines SELECT-Statement (read-only).
