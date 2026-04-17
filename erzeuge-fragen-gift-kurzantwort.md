@@ -33,6 +33,8 @@ MUSS-Regel:
 - Fragetext endet mit 🤖.
 - Innerhalb der geschweiften Klammern `{ ... }` werden alle akzeptierten richtigen Antworten mit `=` eingeleitet.
 - Jede akzeptierte richtige Antwort muss **exakt ein (1) Wort** sein, d.h. sie darf **keine Leerzeichen/Whitespace** enthalten.
+- Bei den Antwortmöglichkeiten wird die **Groß-/Kleinschreibung ignoriert** (die Frage ist **nicht case sensitiv**).
+- Pro Frage ist **auch nur eine** akzeptierte richtige Antwort zulässig; mehrere sind optional (wo sinnvoll).
 - Erstelle **nur** Fragen, bei denen die korrekte Lösung als **ein einzelnes Wort** angegeben werden kann. Wenn das fachlich nicht sinnvoll ist, verwende stattdessen einen anderen Fragetyp (z.B. Multiple Choice).
 
 ## Moodle GIFT-Format (Kurzantwort)
@@ -72,6 +74,6 @@ Schüler:innen der Oberstufe.
 
 1. Jede Frage endet mit 🤖.
 2. Jede akzeptierte richtige Antwort ist **genau 1 Wort** (keine Leerzeichen).
-3. Jede Frage enthält mindestens **2** akzeptierte richtige Antworten (wo sinnvoll).
+3. Jede Frage enthält **mindestens 1** akzeptierte richtige Antwort; mehrere sind optional (wo sinnvoll).
 4. Zwischen Fragen steht mindestens eine Leerzeile.
 5. Ergebnis ist valides Moodle GIFT.
