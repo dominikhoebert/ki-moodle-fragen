@@ -32,6 +32,6 @@ verwende `erzeuge-fragen-sqlite.md`: erzeuge 5 fragen für das fach `Fach`. Beis
 ```
 
 ```sql
-verwende `erzeuge-fragen-sqlite.md`: erzeuge 5 fragen für das fach `insy62`. Thema JOIN (INNER, LEFT, RIGHT, NATURAL, CROSS). Folgende Befehle sind erlaubt: SELECT, DISTINCT, WHERE, AND, OR, NOT, BETWEEN, ORDER BY, LIKE, LIMIT, AS, MIN, MAX, AVG, SUM, COUNT. Nicht erlaubt: UNION, INTERSECT, UNION ALL, EXCEPT, GROUP BY, HAVING, SUBSELECTS, SUBQUERIES, IN, EXISTS, ANY, ALL.
+verwende `erzeuge-fragen-sql-xml.md`: erzeuge 5 fragen für das fach `insy64`. Thema GROUP BY und HAVING. Folgende Befehle sind erlaubt: SELECT, DISTINCT, WHERE, AND, OR, NOT, BETWEEN, ORDER BY, LIKE, LIMIT, AS, MIN, MAX, AVG, SUM, COUNT, JOIN (INNER, LEFT, RIGHT, NATURAL, CROSS), UNION, INTERSECT, UNION ALL, EXCEPT, GROUP BY, HAVING Nicht erlaubt: SUBSELECTS, SUBQUERIES, IN, EXISTS, ANY, ALL.
 ```
 
